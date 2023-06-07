@@ -1,0 +1,32 @@
+[
+  {
+    "instructorName": "John Doe",
+    "instructorEmail": "john.doe@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  },
+  {
+    "instructorName": "Jane Smith",
+    "instructorEmail": "jane.smith@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  },
+  {
+    "instructorName": "Michael Johnson",
+    "instructorEmail": "michael.johnson@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  },
+  {
+    "instructorName": "Sarah Adams",
+    "instructorEmail": "sarah.adams@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  },
+  {
+    "instructorName": "Robert Wilson",
+    "instructorEmail": "robert.wilson@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  },
+  {
+    "instructorName": "Emily Brown",
+    "instructorEmail": "emily.brown@example.com",
+    "instructorPhoto": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340"
+  }
+]

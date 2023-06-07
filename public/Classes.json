@@ -1,0 +1,63 @@
+[
+  {
+    "className": "Yoga Class",
+    "classImage": "https://img.freepik.com/free-photo/ready-back-school_1134-12.jpg?w=996&t=st=1686076209~exp=1686076809~hmac=75dde7197009dbe5532917c9828b7e743ecedf5a7abada3440e29f3d6ad6aed3",
+    "instructorName": "John Doe",
+    "instructorEmail": "john.doe@example.com",
+    "availableSeats": 10,
+    "price": 50,
+    "enrolled": 0,
+    "status": "pending"
+  },
+  {
+    "className": "Painting Workshop",
+    "classImage": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340",
+    "instructorName": "Jane Smith",
+    "instructorEmail": "jane.smith@example.com",
+    "availableSeats": 5,
+    "price": 75,
+    "enrolled": 0,
+    "status": "pending"
+  },
+  {
+    "className": "Cooking Class",
+    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
+    "instructorName": "Michael Johnson",
+    "instructorEmail": "michael.johnson@example.com",
+    "availableSeats": 8,
+    "price": 60,
+    "enrolled": 0,
+    "status": "pending"
+  },
+  {
+    "className": "Photography Workshop",
+    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
+    "instructorName": "Sarah Adams",
+    "instructorEmail": "sarah.adams@example.com",
+    "availableSeats": 0,
+    "price": 90,
+    "enrolled": 0,
+    "status": "pending"
+  },
+
+  {
+    "className": "Dance Class",
+    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
+    "instructorName": "Emily Brown",
+    "instructorEmail": "emily.brown@example.com",
+    "availableSeats": 12,
+    "price": 70,
+    "enrolled": 0,
+    "status": "pending"
+  },
+  {
+    "className": "Language Course",
+    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
+    "instructorName": "David Lee",
+    "instructorEmail": "david.lee@example.com",
+    "availableSeats": 3,
+    "price": 120,
+    "enrolled": 0,
+    "status": "pending"
+  }
+]

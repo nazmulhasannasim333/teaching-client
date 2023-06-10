@@ -1,0 +1,19 @@
+.content-style {
+  position: relative;
+}
+.content-style::before {
+  content: "";
+  width: 190px;
+  border-bottom: 1px solid #8f09b1;
+  bottom: 7px;
+  left: 25px;
+  position: absolute;
+}
+.content-style::after {
+  content: "";
+  width: 190px;
+  border-bottom: 1px solid #8f09b1;
+  bottom: 7px;
+  right: 25px;
+  position: absolute;
+}

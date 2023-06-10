@@ -1,63 +1,56 @@
 [
   {
-    "className": "Yoga Class",
-    "classImage": "https://img.freepik.com/free-photo/ready-back-school_1134-12.jpg?w=996&t=st=1686076209~exp=1686076809~hmac=75dde7197009dbe5532917c9828b7e743ecedf5a7abada3440e29f3d6ad6aed3",
-    "instructorName": "John Doe",
-    "instructorEmail": "john.doe@example.com",
+    "className": "Spanish 101",
+    "classImage": "https://images.pexels.com/photos/5427998/pexels-photo-5427998.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "instructorName": "Himu Sharkar",
+    "instructorEmail": "himuakthar884@gmail.com",
     "availableSeats": 10,
     "price": 50,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 132
   },
   {
-    "className": "Painting Workshop",
-    "classImage": "https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340",
-    "instructorName": "Jane Smith",
+    "className": "French for Beginners",
+    "classImage": "https://images.pexels.com/photos/7450476/pexels-photo-7450476.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "instructorName": "Md Nazmul Hasan",
     "instructorEmail": "jane.smith@example.com",
-    "availableSeats": 5,
+    "availableSeats": 0,
     "price": 75,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 6
   },
   {
-    "className": "Cooking Class",
+    "className": "German Language Immersion",
     "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
-    "instructorName": "Michael Johnson",
+    "instructorName": "Md Shuvo Islam",
     "instructorEmail": "michael.johnson@example.com",
     "availableSeats": 8,
     "price": 60,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 154
   },
   {
-    "className": "Photography Workshop",
-    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
-    "instructorName": "Sarah Adams",
-    "instructorEmail": "sarah.adams@example.com",
+    "className": "Italian Conversation Class",
+    "classImage": "https://images.pexels.com/photos/5212320/pexels-photo-5212320.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    "instructorName": "Himu Sharkar",
+    "instructorEmail": "himuakthar884@gmail.com",
     "availableSeats": 0,
     "price": 90,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 0
   },
-
   {
-    "className": "Dance Class",
-    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
-    "instructorName": "Emily Brown",
+    "className": "Japanese Language and Culture",
+    "classImage": "https://images.pexels.com/photos/54257/pexels-photo-54257.jpeg?auto=compress&cs=tinysrgb&w=1600",
+    "instructorName": "Md Nahiid Khan",
     "instructorEmail": "emily.brown@example.com",
-    "availableSeats": 12,
+    "availableSeats": 0,
     "price": 70,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 10
   },
   {
-    "className": "Language Course",
-    "classImage": "https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb",
-    "instructorName": "David Lee",
-    "instructorEmail": "david.lee@example.com",
+    "className": "Arabic Language Basics",
+    "classImage": "https://images.pexels.com/photos/4700121/pexels-photo-4700121.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "instructorName": "Himu Sharkar",
+    "instructorEmail": "himuakthar884@gmail.com",
     "availableSeats": 3,
     "price": 120,
-    "enrolled": 0,
-    "status": "pending"
+    "enrolled": 343
   }
 ]

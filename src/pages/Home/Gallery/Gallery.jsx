@@ -1,4 +1,6 @@
 import React from 'react';
+import Zoom from 'react-medium-image-zoom';
+import 'react-medium-image-zoom/dist/styles.css';
 
 const Gallery = () => {
     return (
@@ -8,24 +10,36 @@ const Gallery = () => {
     <div className="flex flex-wrap md:-m-2 -m-1">
       <div className="flex flex-wrap w-1/2">
         <div className="md:p-2 p-1 w-1/2">
-          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/500x300" />
+          <Zoom>
+          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/4778621/pexels-photo-4778621.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </Zoom>
         </div>
         <div className="md:p-2 p-1 w-1/2">
-          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/501x301" />
+          <Zoom>
+          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/8197534/pexels-photo-8197534.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </Zoom>
         </div>
         <div className="md:p-2 p-1 w-full">
-          <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://dummyimage.com/600x360" />
+          <Zoom>
+          <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://images.pexels.com/photos/207691/pexels-photo-207691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </Zoom>
         </div>
       </div>
       <div className="flex flex-wrap w-1/2">
         <div className="md:p-2 p-1 w-full">
-          <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://dummyimage.com/601x361" />
+         <Zoom>
+         <img alt="gallery" className="w-full h-full object-cover object-center block" src="https://images.pexels.com/photos/7092339/pexels-photo-7092339.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+         </Zoom>
         </div>
         <div className="md:p-2 p-1 w-1/2">
-          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302" />
+          <Zoom>
+          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/7092371/pexels-photo-7092371.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </Zoom>
         </div>
         <div className="md:p-2 p-1 w-1/2">
-          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303" />
+          <Zoom>
+          <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://images.pexels.com/photos/6503155/pexels-photo-6503155.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          </Zoom>
         </div>
       </div>
     </div>

@@ -42,7 +42,7 @@ const Slider = () => {
       <div className="relative w-full">
         <img src={slides[activeSlide].image} alt={slides[activeSlide].caption} className="w-full h-full object-cover" />
         <div className="absolute top-0 left-0 w-full bg-black bg-opacity-50 h-full flex flex-col justify-center pl-8">
-          <div className='max-w-2xl ms-32'>
+          <div className='max-w-2xl lg:ms-32 mx-4'>
           <h1 className="text-white text-3xl font-bold mb-4 ">{slides[activeSlide].caption}</h1>
           <p className="text-white ">{slides[activeSlide].description}</p>
           </div>

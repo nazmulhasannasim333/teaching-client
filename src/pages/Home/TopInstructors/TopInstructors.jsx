@@ -1,44 +1,47 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
+import useInstructor from "../../../hooks/useInstructor";
 
 const TopInstructors = () => {
-    const [instructors, setInstructors] = useState([]);
+  const [instructors, setInstructors] = useState([]);
 
-    useEffect(() => {
-        fetch('/Instructors.json')
-        .then(res => res.json())
-        .then(data => {
-           setInstructors(data);
-           console.log(data);
-        })
-    },[])
+  useEffect(() => {
+    fetch("http://localhost:5000/instructors")
+      .then((res) => res.json())
+      .then((data) => {
+        setInstructors(data);
+      });
+  }, []);
 
+  const [isInstructor] = useInstructor()
 
-    return (
-        <section className=" body-font my-24 max-w-[1300px] mx-auto">
-        <h3 className='text-center mb-10 font-semibold text-5xl'>Popular Instructors</h3>
-        <div className='grid gap-6 mb-8 lg:grid-cols-3 sm:grid-cols-1'>
-       {
-        instructors.map((instructor, index) =>  <div key={index} className='overflow-hidden relative transition duration-200 transform hover:-translate-y-2 rounded shadow-lg hover:shadow-2xl'>
-        
+  return (
+    <section className=" body-font my-24 px-5 max-w-[1300px] mx-auto">
+      <div className="max-w-2xl mx-auto">
+      <h3 className="text-center mb-8 font-semibold text-5xl">
+        Popular Instructors
+      </h3>
+      <p className="mb-14 text-center text-lg">With their dynamic presentation skills and charismatic presence, these lecturers have the ability to captivate audiences. Their thought-provoking lectures leave a lasting impression on students.</p>
+      </div>
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:gap-6 sm:px-6">
 
-        <img
-             src="https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb"
-             alt='book cover'
-             className='object-cover w-full '
-             style={{height: "430px"}}
-           />
-           <div className='bg-black h-full px-6 py-12 bg-opacity-80 opacity-0 hover:opacity-100 text-white absolute inset-0 transition-opacity duration-200 flex flex-col'>
-             <span className='font-semibold text-3xl'>Nasim</span>
-             <br />
-             <p className='tetx-xl'>Email: <span className='font-semibold text-xl'>nasim2gmail.com</span></p>
-             
-           
-           </div>
-         </div> )
-       }
-        </div>
-         </ section >
-    );
+        {
+            instructors.map((instractor, index) => <div key={index} className="w-full h-96 relative overflow-hidden rounded-md shadow-lg">
+            <img
+              src={instractor.photo}
+              alt="Card Image"
+              className="w-full h-full object-cover transition-opacity duration-300 hover:opacity-60"
+            />
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-black bg-opacity-75 text-white transition-opacity duration-300 opacity-100 ">
+              <p className="text-lg font-semibold">{instractor.name}</p>
+              <p className="text-md mt-1">Email: {instractor.email}</p>
+              <p className="text-md mt-1">Position: {instractor.role}</p>
+            </div>
+          </div>)
+        }
+      
+      </div>
+    </section>
+  );
 };
 
 export default TopInstructors;

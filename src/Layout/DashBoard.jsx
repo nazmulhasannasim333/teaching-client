@@ -1,61 +1,141 @@
-import React, { useState } from 'react';
+import React from "react";
+import { NavLink, Outlet, ScrollRestoration } from "react-router-dom";
+import useAdmin from "../hooks/useAdmin";
+import useInstructor from "../hooks/useInstructor";
+import Footer from "../pages/Shared/Footer/Footer";
+import Navbar from "../pages/Shared/Navbar/Navbar";
 
-const Dashboard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsOpen(!isOpen);
-  };
+const DashBoard = () => {
+  const [isAdmin] = useAdmin();
+  const [isInstructor] = useInstructor();
+//   console.log(isAdmin, isInstructor);
 
   return (
-    <div className="relative">
-      <button
-        className="fixed bottom-4 right-4 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full shadow"
-        onClick={toggleDrawer}
-      >
-        {isOpen ? 'Close Drawer' : 'Open Drawer'}
-      </button>
-
-      <div
-        className={`fixed inset-y-0 left-0 w-64 bg-white shadow-lg transform transition-transform ease-in-out duration-300 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex justify-between items-center bg-blue-500 px-4 py-3">
-          <h2 className="text-white text-lg font-bold">Drawer Title</h2>
-          <button
-            className="text-white focus:outline-none"
-            onClick={toggleDrawer}
-            aria-label="Close Drawer"
+    <div>
+      <Navbar />
+      <div className="drawer lg:drawer-open">
+        <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content flex flex-col items-center justify-center">
+          <Outlet />
+          <label
+            htmlFor="my-drawer-2"
+            className="btn btn-primary drawer-button lg:hidden"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
+            Open drawer
+          </label>
         </div>
-        <div className="px-4 py-6">
-          <p>This is some content inside the drawer.</p>
-          <ul className="mt-4">
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-          </ul>
-
-          {/* Additional Content */}
-          <div className="mt-6">
-            <h3 className="text-lg font-bold">Additional Content</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </div>
+        <div className="drawer-side">
+          <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+          {isAdmin ? (
+            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+              {/* Sidebar content here */}
+              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
+                Admin Dashoard
+              </p>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/manageclasses"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  Manage Classes
+                </NavLink>
+              </li>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/manageusers"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  Manage Users
+                </NavLink>
+              </li>
+            </ul>
+          ) : isInstructor ? (
+            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+              {/* Sidebar content here */}
+              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
+                Instructor Dashoard
+              </p>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/myclasses"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  My Classes
+                </NavLink>
+              </li>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/addclasses"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  Add a Class
+                </NavLink>
+              </li>
+            </ul>
+          ) : (
+            <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
+              {/* Sidebar content here */}
+              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
+                Student Dashoard
+              </p>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/myselectedclass"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  My Selected Classes
+                </NavLink>
+                <NavLink
+                  to="/dashboard/myenrolledclass"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  My Enrolled Classes
+                </NavLink>
+              </li>
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/paymenthistory"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-purple-600"
+                      : "hover:text-purple-600 ease-in duration-200"
+                  }
+                >
+                  Payment History
+                </NavLink>
+              </li>
+            </ul>
+          )}
         </div>
       </div>
+      <Footer />
+      <ScrollRestoration />
     </div>
   );
 };
 
-export default Dashboard;
+export default DashBoard;

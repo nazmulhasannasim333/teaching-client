@@ -19,7 +19,7 @@ const CheckoutForm = ({ price, loadedClass }) => {
 
 
   useEffect(() => {
-    fetch(`https://teaching-server.vercel.app/approvedclass`)
+    fetch(`http://localhost:5000/approvedclass`)
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);
@@ -86,7 +86,7 @@ const CheckoutForm = ({ price, loadedClass }) => {
       
       const updatedSeat = classes.map((cls) => {
         if (cls._id === loadedClass.classId) {
-          fetch(`https://teaching-server.vercel.app/updateClass/${loadedClass.classId}`, {
+          fetch(`http://localhost:5000/updateClass/${loadedClass.classId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

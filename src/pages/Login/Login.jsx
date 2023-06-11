@@ -49,7 +49,7 @@ const Login = () => {
             photo: signinGogle.photoURL,
             date: new Date().getFullYear()
           };
-          fetch("https://teaching-server.vercel.app/users", {
+          fetch("http://localhost:5000/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",

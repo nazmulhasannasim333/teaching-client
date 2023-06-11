@@ -13,7 +13,7 @@ const TopClasses = () => {
   const [theme, setTheme] = useState(localStorage.getItem('theme'));
 
   useEffect(() => {
-    fetch(`https://teaching-server.vercel.app/popularclass`)
+    fetch(`http://localhost:5000/popularclass`)
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);
@@ -50,7 +50,7 @@ const TopClasses = () => {
         name: user.displayName,
         classId: _id,
       };
-      fetch("https://teaching-server.vercel.app/selected", {
+      fetch("http://localhost:5000/selected", {
         method: "POST",
         headers: {
           "content-type": "application/json",

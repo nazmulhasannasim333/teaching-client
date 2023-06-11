@@ -4,7 +4,7 @@ import 'react-medium-image-zoom/dist/styles.css';
 
 const Gallery = () => {
     return (
-        <section className=" body-font max-w-[1400px] mx-auto my-24">
+        <section className=" body-font max-w-[1340px] mx-auto my-24">
             <h3 className='text-center mb-10 font-semibold text-5xl'>Gallery</h3>
   <div className="container px-5 mx-auto flex flex-wrap">
     <div className="flex flex-wrap md:-m-2 -m-1">

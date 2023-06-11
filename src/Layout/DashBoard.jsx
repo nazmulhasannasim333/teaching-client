@@ -1,9 +1,11 @@
 import React from "react";
+import { FaBook, FaBookDead, FaBookMedical, FaBriefcase, FaClipboard, FaCreditCard, FaHome, FaUsersCog } from "react-icons/fa";
 import { NavLink, Outlet, ScrollRestoration } from "react-router-dom";
+import DashboardMenu from "../components/DashboardMenu/DashboardMenu";
+import DashboardUser from "../components/DashboardUser/DashboardUser";
+import Logout from "../components/Logout/Logout";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
-import Footer from "../pages/Shared/Footer/Footer";
-import Navbar from "../pages/Shared/Navbar/Navbar";
 
 const DashBoard = () => {
   const [isAdmin] = useAdmin();
@@ -12,7 +14,7 @@ const DashBoard = () => {
 
   return (
     <div>
-      <Navbar />
+      <>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col items-center justify-center">
@@ -29,110 +31,162 @@ const DashBoard = () => {
           {isAdmin ? (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
-                Admin Dashoard
-              </p>
+              <DashboardUser />
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/adminhome"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                      : "hover:text-purple-600  ease-in duration-200"
+                  }
+                >
+                  <FaHome className="font-bold text-3xl" />
+                  Admin Home
+                </NavLink>
+              </li>
               <li className="text-lg font-semibold">
                 <NavLink
                   to="/dashboard/manageclasses"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
+                      ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                      : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
+                  <FaBookDead className="font-bold text-2xl" />
                   Manage Classes
                 </NavLink>
               </li>
-              <li className="text-lg font-semibold">
+              <li className="text-lg py-2 font-semibold">
                 <NavLink
                   to="/dashboard/manageusers"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
-                  }
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
                 >
+                  <FaUsersCog className="font-bold text-3xl" />
                   Manage Users
                 </NavLink>
               </li>
+              <div className="h-[1px] w-full bg-slate-400 my-3"></div>
+              <DashboardMenu />
+              <Logout />
             </ul>
           ) : isInstructor ? (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
-                Instructor Dashoard
-              </p>
+              <DashboardUser />
+              <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/instructorhome"
+                  className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
+                >
+                   <FaHome className="font-bold text-2xl" />
+                  Instructor Home
+                </NavLink>
+              </li>
               <li className="text-lg font-semibold">
                 <NavLink
                   to="/dashboard/myclasses"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
+                      ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                      : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
+                   <FaBook className="font-bold text-2xl" />
                   My Classes
                 </NavLink>
               </li>
-              <li className="text-lg font-semibold">
+              <li className="text-lg py-2 font-semibold">
                 <NavLink
                   to="/dashboard/addclasses"
                   className={({ isActive }) =>
                     isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
+                      ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                      : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
+                  <FaBookMedical className="font-bold text-2xl" />
                   Add a Class
                 </NavLink>
               </li>
+              <div className="h-[1px] w-full bg-slate-400 my-3"></div>
+              <DashboardMenu />
+              <Logout />
             </ul>
           ) : (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
-              <p className="text-center mb-10 mt-2 text-2xl font-bold text-orange-600">
-                Student Dashoard
-              </p>
+              <DashboardUser />
               <li className="text-lg font-semibold">
+                <NavLink
+                  to="/dashboard/studenthome"
+                  className={({ isActive }) =>
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
+                >
+                  <FaHome className="font-bold text-2xl" />
+                  Student Home
+                </NavLink>
+                </li>
+              <li className="text-lg py-2 font-semibold">
                 <NavLink
                   to="/dashboard/myselectedclass"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
-                  }
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
                 >
+                  <FaBriefcase className="font-bold  text-2xl" />
                   My Selected Classes
                 </NavLink>
+                </li>
+                <li className=" text-lg font-semibold">
                 <NavLink
                   to="/dashboard/myenrolledclass"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
-                  }
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
                 >
+                   <FaClipboard className="font-bold text-2xl" />
                   My Enrolled Classes
                 </NavLink>
               </li>
-              <li className="text-lg font-semibold">
+              <li className="text-lg py-2 font-semibold">
                 <NavLink
                   to="/dashboard/paymenthistory"
                   className={({ isActive }) =>
-                    isActive
-                      ? "text-purple-600"
-                      : "hover:text-purple-600 ease-in duration-200"
-                  }
+                  isActive
+                    ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+                    : "hover:text-purple-600  ease-in duration-200"
+                }
                 >
+                  <FaCreditCard className="font-bold text-2xl" />
                   Payment History
                 </NavLink>
               </li>
+              <div className="h-[1px] w-full bg-slate-400 my-3"></div>
+              <DashboardMenu />
+              <Logout />
             </ul>
           )}
         </div>
       </div>
-      <Footer />
+      </>
+      
       <ScrollRestoration />
     </div>
   );

@@ -65,7 +65,7 @@ const ManageUsers = () => {
       <div className="overflow-x-auto w-full">
         <table className="table w-full">
           {/* head */}
-          <thead>
+          <thead className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white">
             <tr>
               <th className="text-xl font-semibold">#</th>
               <th className="text-xl font-semibold">Image</th>

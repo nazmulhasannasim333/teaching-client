@@ -2,9 +2,9 @@ import React from 'react';
 
 const Review = () => {
     return (
-        <section className=" body-font my-44">
+        <section className=" body-font my-28">
       
-  <div className="container px-5  mx-auto">
+  <div className=" max-w-[1370px] mx-auto">
   <h3 className=" mb-20 ms-8 font-semibold text-3xl">
   Why we are the first choice of students and parents?
       </h3>

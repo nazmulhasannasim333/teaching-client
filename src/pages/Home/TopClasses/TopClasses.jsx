@@ -91,13 +91,13 @@ const TopClasses = () => {
   return (
     <section className=" body-font my-24">
 
-<div className="max-w-2xl mx-auto">
+<div className="max-w-3xl mx-auto">
       <h3 className="text-center mb-8 font-semibold text-5xl">
       Popular Classes
       </h3>
       <p className="mb-14 text-center text-lg">Classes that offer language learning opportunities, such as Spanish, Mandarin, or French, attract individuals interested in acquiring new language skills for personal or professional purposes.</p>
       </div>
-      <div className="max-w-[1400px] px-5 mx-auto">
+      <div className="max-w-[1400px]  mx-auto">
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5 lg:gap-6 sm:px-6">
           {classes.map((oneClass, index) => (
             <div key={index} className="p-4 ">

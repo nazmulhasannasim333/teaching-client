@@ -69,69 +69,72 @@ const AddClass = () => {
 
   return (
     <div className="max-w-7xl mx-auto">
-      <div className="bg-whote pb-20  text-black">
+      <h3 className="text-center text-4xl font-semibold mb-14 mt-0">
+        Add A Class
+      </h3>
+      <div className="bg-whote pb-20  ">
         <div className="max-w-3xl lg:mx-auto mx-4 mt-14">
           <form onSubmit={handleSubmit(onSubmit)}>
             <div className="grid lg:grid-cols-2 gap-6">
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Your Name
                 </label>
                 <input
                   defaultValue={user?.displayName}
                   readOnly
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("instructorName")}
                 />
               </div>
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Your Email
                 </label>
                 <input
                   defaultValue={user?.email}
                   readOnly
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("instructorEmail")}
                 />
               </div>
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Class Name
                 </label>
                 <input
                   type="text"
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("className")}
                 />
               </div>
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Available Seats
                 </label>
                 <input
                   type="number"
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("availableSeats")}
                 />
               </div>
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Price
                 </label>
                 <input
                   type="number"
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("price")}
                 />
               </div>
               <div className="pt-3">
-                <label className="text-black" htmlFor="text">
+                <label className="" htmlFor="text">
                   Class Image
                 </label>
                 <input
                   type="file"
-                  className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                  className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                   {...register("classImage")}
                 />
               </div>

@@ -3,14 +3,17 @@ import Dashboard from "../Layout/DashBoard";
 import Main from "../Layout/Main";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Classes from "../pages/Classes/Classes";
+import AdminHome from "../pages/Dashboard/AdminDashboard/AdminHome/AdminHome";
 import ManageUsers from "../pages/Dashboard/AdminDashboard/ManageUsers/ManageUsers";
 import ManageClasses from "../pages/Dashboard/AdminDashboard/Manageclasses/ManageClasses";
 import AddClass from "../pages/Dashboard/InstructorDashboard/AddClass/AddClass";
+import InstructorHome from "../pages/Dashboard/InstructorDashboard/InstructorHome/InstructorHome";
 import MyClasses from "../pages/Dashboard/InstructorDashboard/MyClasses/MyClasses";
 import MyEnrolledClass from "../pages/Dashboard/StudentDashboard/MyEnrolledClass/MyEnrolledClass";
 import MySelectedClass from "../pages/Dashboard/StudentDashboard/MySelectedClass/MySelectedClass";
 import Payment from "../pages/Dashboard/StudentDashboard/Payment/Payment";
 import PaymentHistory from "../pages/Dashboard/StudentDashboard/PaymentHistory/PaymentHistory";
+import StudentHome from "../pages/Dashboard/StudentDashboard/StudentHome/StudentHome";
 import Home from "../pages/Home/Home/Home";
 import Instructors from "../pages/Instructors/Instructors";
 import Login from "../pages/Login/Login";
@@ -53,6 +56,10 @@ const router = createBrowserRouter([
     children: [
      // Admin Dashboard Routes
       {
+        path: "adminhome",
+        element: <AdminRoute><AdminHome /></AdminRoute>,
+      },
+      {
         path: "manageusers",
         element: <AdminRoute><ManageUsers /></AdminRoute>,
       },
@@ -62,6 +69,10 @@ const router = createBrowserRouter([
       },
     //   IInstructor Dashboard routes
       {
+        path: "instructorhome",
+        element: <InstructorRoute><InstructorHome /></InstructorRoute>,
+      },
+      {
         path: "myclasses",
         element: <InstructorRoute><MyClasses /></InstructorRoute>,
       },
@@ -70,6 +81,10 @@ const router = createBrowserRouter([
         element: <InstructorRoute><AddClass /></InstructorRoute>,
       },
     //   Student Dashboard Routes
+      {
+        path: "studenthome",
+        element: <StudentHome />,
+      },
       {
         path: "myselectedclass",
         element: <MySelectedClass />,

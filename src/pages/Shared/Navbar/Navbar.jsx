@@ -55,9 +55,9 @@ const Navbar = () => {
     <div className={`sticky top-0 z-50 ${isScrolled && theme === 'dark' ? 'sticky top-0 z-50 bg-gray-800 opacity-80' : "" } ${isScrolled && theme === 'light' ? 'sticky top-0 z-50 bg-slate-100 opacity-80' : ""} `}>
       <div className=" max-w-[1500px] mx-auto ">
         <nav className=" px-3 lg:px-20 flex justify-between items-center ">
-          <div className="py-5 text-purple-500 font-extrabold text-4xl">
+          <div className="py-5 text-purple-500 font-bold text-4xl">
             <Link to="/">
-              <span className="text-orange-600">Teaching</span>.Ing
+              <span className="text-orange-600 font-bold">Teaching</span>.Ing
             </Link>
           </div>
           <div>
@@ -103,10 +103,10 @@ const Navbar = () => {
                   <NavLink
                     to={
                       isAdmin
-                        ? "/dashboard/manageclasses"
+                        ? "/dashboard/adminhome"
                         : isInstructor
-                        ? "/dashboard/myclasses"
-                        : "/dashboard/myselectedclass"
+                        ? "/dashboard/instructorhome"
+                        : "/dashboard/studenthome"
                     }
                     className={({ isActive }) =>
                       isActive

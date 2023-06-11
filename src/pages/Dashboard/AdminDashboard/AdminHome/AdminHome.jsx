@@ -361,9 +361,9 @@ const AdminHome = () => {
             </div>
           </footer>
           <p className="text-center text-sm text-gray-500 my-10">
-            © 2019-2021{" "}
+            © 2023{" "}
             <a href="#" className="hover:underline" target="_blank">
-              Themesberg
+             Teachng
             </a>
             . All rights reserved.
           </p>

@@ -9,17 +9,17 @@ const CheckoutForm = ({ price, loadedClass }) => {
   const elements = useElements();
   const [cardError, setCardError] = useState("");
   const [transactionId, setTransactionId] = useState("");
-  const [axiosSecure] = useAxiosSecure();
   const [clientSecret, setClientSecret] = useState("");
-  const { user } = useContext(AuthContext);
   const [processing, setProcessing] = useState(false);
+  const [axiosSecure] = useAxiosSecure();
+  const { user } = useContext(AuthContext);
   const [classes, setClasses] = useState([]);
 
   
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/approvedclass`)
+    fetch(`https://teaching-server.vercel.app/approvedclass`)
       .then((res) => res.json())
       .then((data) => {
         setClasses(data);
@@ -86,7 +86,7 @@ const CheckoutForm = ({ price, loadedClass }) => {
       
       const updatedSeat = classes.map((cls) => {
         if (cls._id === loadedClass.classId) {
-          fetch(`http://localhost:5000/updateClass/${loadedClass.classId}`, {
+          fetch(`https://teaching-server.vercel.app/updateClass/${loadedClass.classId}`, {
             method: "PUT",
             headers: {
               "Content-Type": "application/json",

@@ -12,7 +12,7 @@ const Classes = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/approvedclass`)
+        fetch(`https://teaching-server.vercel.app/approvedclass`)
         .then(res => res.json())
         .then(data => {
             seClasses(data);
@@ -49,7 +49,7 @@ const Classes = () => {
             name: user.displayName,
             classId: _id,
           };
-          fetch("http://localhost:5000/selected", {
+          fetch("https://teaching-server.vercel.app/selected", {
             method: "POST",
             headers: {
               "content-type": "application/json",

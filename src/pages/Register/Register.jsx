@@ -9,9 +9,7 @@ const Register = () => {
 const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
   const [showError, setShowError] = useState("");
   const navigate = useNavigate()
-  const [password, setPassword] = useState('');
-  const [confirmPassword, setConfirmPassword] = useState('');
-  const [confirmError, setConfirmError] = useState('');
+  const [error, seterror] = useState('')
   
 
   const {
@@ -22,6 +20,11 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
 
   const onSubmit = (data) => {
     console.log(data);
+    const password = data.password;
+    const confirm = data.confrm;
+    if(password !== confirm){
+      seterror('Password are not match')
+    }
 
     const user = {
         name: data.name,
@@ -125,6 +128,8 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
                 Your Name
               </label>
               <input
+              type="text"
+              required
                 className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                 {...register("name")}
               />
@@ -134,6 +139,8 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
                 Your Email
               </label>
               <input
+              type="email"
+              required
                 className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                 {...register("email")}
               />
@@ -144,6 +151,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
               </label>
               <input
                 type="text"
+                required
                 className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                 {...register("photo")}
               />
@@ -170,11 +178,12 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
               </label>
               <input
                 type="password"
+                required
                 className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                 {...register("confirm")}
               />
             </div>
-            <p className="text-red-500">{confirmError && confirmError}</p>
+            {error && <p className="text-red-600">{error}</p>}
           <button
             type="submit"
             className="group my-6 relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"

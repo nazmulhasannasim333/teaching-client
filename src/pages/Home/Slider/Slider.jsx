@@ -5,20 +5,20 @@ const Slider = () => {
     {
       id: 1,
       image: 'https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340',
-      caption: 'Slide 1',
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam tenetur mollitia, vero eveniet aspernatur assumenda minus! Dolorem delectus, sunt iusto magnam iure nesciunt quod hic fuga explicabo reprehenderit dolores cumque?",
+      caption: 'Start from Play',
+      description: "Schools also often offer extracurricular activities such as sports, arts, clubs, and organizations, which allow students to explore their interests and develop talents outside of the classroom. These activities promote teamwork, leadership, and personal growth",
     },
     {
       id: 2,
-      image: 'https://img.freepik.com/free-photo/ready-back-school_1134-12.jpg?w=996&t=st=1686076209~exp=1686076809~hmac=75dde7197009dbe5532917c9828b7e743ecedf5a7abada3440e29f3d6ad6aed3',
-      caption: 'Slide 2',
-      description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam tenetur mollitia, vero eveniet aspernatur assumenda minus! Dolorem delectus, sunt iusto magnam iure nesciunt quod hic fuga explicabo reprehenderit dolores cumque?",
+      image: 'https://images.pexels.com/photos/5428002/pexels-photo-5428002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+      caption: 'Know about Earth',
+      description: "Furthermore, schools serve as a social environment where students interact with their peers, make friends, and learn important social skills. They provide a platform for students to build relationships, develop their communication abilities, and gain exposure to diverse perspectives and cultures.",
     },
     {
       id: 3,
       image: 'https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb',
-      caption: 'Slide 3',
-      description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, suscipit?",
+      caption: 'Classes Time',
+      description: "Schools can vary greatly in terms of size, location, educational philosophies, and available resources. Each school has its own unique community, values, and educational approach, which contribute to its overall identity and atmosphere",
     },
   ];
 
@@ -43,8 +43,8 @@ const Slider = () => {
         <img src={slides[activeSlide].image} alt={slides[activeSlide].caption} className="w-full h-full object-cover" />
         <div className="absolute top-0 left-0 w-full bg-black bg-opacity-50 h-full flex flex-col justify-center pl-8">
           <div className='max-w-2xl lg:ms-32 mx-4'>
-          <h1 className="text-white text-3xl font-bold mb-4 ">{slides[activeSlide].caption}</h1>
-          <p className="text-white ">{slides[activeSlide].description}</p>
+          <h1 className="text-white lg:text-5xl text-3xl font-bold mb-4 ">{slides[activeSlide].caption}</h1>
+          <p className="text-white text-lg">{slides[activeSlide].description}</p>
           </div>
         </div>
       </div>

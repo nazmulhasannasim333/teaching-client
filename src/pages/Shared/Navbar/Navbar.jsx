@@ -49,11 +49,13 @@ const Navbar = () => {
 
   // get user
 useEffect(() => {
+ if(user){
   fetch(`http://localhost:5000/userprofile/${user?.email}`)
   .then(res => res.json())
   .then(data => {
     setUserProfile(data)
   })
+ }
 },[user])
 
 

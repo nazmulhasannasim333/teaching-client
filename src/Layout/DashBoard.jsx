@@ -3,7 +3,6 @@ import { FaBook, FaBookDead, FaBookMedical, FaBriefcase, FaClipboard, FaCreditCa
 import { NavLink, Outlet, ScrollRestoration } from "react-router-dom";
 import DashboardMenu from "../components/DashboardMenu/DashboardMenu";
 import DashboardUser from "../components/DashboardUser/DashboardUser";
-import Logout from "../components/Logout/Logout";
 import useAdmin from "../hooks/useAdmin";
 import useInstructor from "../hooks/useInstructor";
 
@@ -31,6 +30,7 @@ const DashBoard = () => {
           {isAdmin ? (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
               {/* Sidebar content here */}
+              
               <DashboardUser />
               <li className="text-lg font-semibold">
                 <NavLink
@@ -73,7 +73,6 @@ const DashBoard = () => {
               </li>
               <div className="h-[1px] w-full bg-slate-400 my-3"></div>
               <DashboardMenu />
-              <Logout />
             </ul>
           ) : isInstructor ? (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
@@ -120,7 +119,7 @@ const DashBoard = () => {
               </li>
               <div className="h-[1px] w-full bg-slate-400 my-3"></div>
               <DashboardMenu />
-              <Logout />
+              
             </ul>
           ) : (
             <ul className="menu p-4 w-80 h-full bg-base-200 text-base-content">
@@ -180,7 +179,6 @@ const DashBoard = () => {
               </li>
               <div className="h-[1px] w-full bg-slate-400 my-3"></div>
               <DashboardMenu />
-              <Logout />
             </ul>
           )}
         </div>

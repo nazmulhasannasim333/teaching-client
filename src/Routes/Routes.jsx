@@ -2,6 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import Dashboard from "../Layout/DashBoard";
 import Main from "../Layout/Main";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
+import UserProfile from "../components/UserProfile/UserProfile";
 import Classes from "../pages/Classes/Classes";
 import AdminHome from "../pages/Dashboard/AdminDashboard/AdminHome/AdminHome";
 import ManageUsers from "../pages/Dashboard/AdminDashboard/ManageUsers/ManageUsers";
@@ -67,6 +69,7 @@ const router = createBrowserRouter([
         path: "manageclasses",
         element: <AdminRoute><ManageClasses /></AdminRoute>,
       },
+     
     //   IInstructor Dashboard routes
       {
         path: "instructorhome",
@@ -102,6 +105,15 @@ const router = createBrowserRouter([
         element: <Payment />,
         loader: ({ params }) =>
         fetch(`http://localhost:5000/select/${params.id}`),
+      },
+      {
+        path: "userprofile",
+        element: <UserProfile />,
+      },
+      {
+        path: "updateprofile/:id",
+        element: <UpdateProfile />,
+        loader: ({params}) => fetch(`http://localhost:5000/getprofileinfo/${params.id}`)
       },
     ],
   },

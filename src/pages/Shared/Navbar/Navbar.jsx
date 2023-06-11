@@ -10,6 +10,8 @@ const Navbar = () => {
   const { user, logout } = useContext(AuthContext);
     const [isScrolled, setIsScrolled] = useState(false);
   const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light');
+  const [userProfile, setUserProfile] = useState({})
+  // theme toggler
   const handleToggle = (e) => {
     if(e.target.checked){
       setTheme('dark')
@@ -17,7 +19,7 @@ const Navbar = () => {
       setTheme('light')
     }
   }
-
+// theme set
   useEffect(() => {
     localStorage.setItem('theme', theme)
     const localTheme = localStorage.getItem('theme')
@@ -25,7 +27,7 @@ const Navbar = () => {
   },[theme])
 
 
-
+// scroll
   useEffect(() => {
     const handleScroll = () => {
       const isTop = window.scrollY < 100;
@@ -38,15 +40,24 @@ const Navbar = () => {
     };
   }, []);
 
-
+// logout
   const handleLogout = () => {
     logout(() => {
       console.log("logout successful");
     });
   };
 
+  // get user
+useEffect(() => {
+  fetch(`http://localhost:5000/userprofile/${user?.email}`)
+  .then(res => res.json())
+  .then(data => {
+    setUserProfile(data)
+  })
+},[user])
 
 
+// check admin
   const [isAdmin] = useAdmin();
   const [isInstructor] = useInstructor();
   // console.log(isAdmin, isInstructor);
@@ -126,8 +137,8 @@ const Navbar = () => {
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
                     <img
-                      title={user && user.displayName}
-                      src={user && user.photoURL}
+                      title={userProfile && userProfile?.name}
+                      src={userProfile && userProfile?.photo}
                     />
                   </div>
                 </label>
@@ -136,7 +147,7 @@ const Navbar = () => {
                   className="mt-3 p-2 shadow menu menu-compact dropdown-content text-orange-600 bg-indigo-300 rounded-box w-52"
                 >
                   <li>
-                    <Link to="/profile" className="justify-between">
+                    <Link to={user ? '/dashboard/userprofile' : '/'} className="justify-between">
                       Profile
                       <span className="badge">New</span>
                     </Link>

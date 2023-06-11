@@ -4,7 +4,6 @@ import React from "react";
 const CheckComponent = () => {
   return (
     <div>
-      check
     </div>
   );
 };

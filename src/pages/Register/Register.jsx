@@ -27,6 +27,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
         name: data.name,
         email: data.email,
         photo: data.photo,
+        date: new Date().getFullYear()
       };
       fetch("http://localhost:5000/users", {
         method: "POST",
@@ -84,6 +85,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
         name: signinGogle.displayName,
         email: signinGogle.email,
         photo: signinGogle.photoURL,
+        date: new Date().getFullYear()
       };
       fetch("http://localhost:5000/users", {
         method: "POST",

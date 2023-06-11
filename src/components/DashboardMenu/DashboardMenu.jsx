@@ -1,5 +1,5 @@
 import React from "react";
-import { FaBookReader, FaHome, FaUsers } from "react-icons/fa";
+import { FaBookReader, FaHome, FaUser, FaUsers } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const DashboardMenu = () => {
@@ -42,6 +42,19 @@ const DashboardMenu = () => {
         >
           <FaBookReader className="font-bold text-3xl" />
           Classes
+        </NavLink>
+      </li>
+      <li className="text-lg pt-3 font-semibold">
+        <NavLink
+          to="/dashboard/userprofile"
+          className={({ isActive }) =>
+            isActive
+              ? "text-white bg-gradient-to-r from-green-400 to-blue-500"
+              : "hover:text-purple-600 ease-in duration-200"
+          }
+        >
+          <FaUser className="font-bold text-3xl" />
+          Profile
         </NavLink>
       </li>
     </>

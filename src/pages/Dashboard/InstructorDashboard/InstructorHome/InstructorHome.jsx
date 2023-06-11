@@ -14,7 +14,6 @@ const InstructorHome = () => {
       enabled: !loading,
       queryFn: async () => {
           const response = await axiosSecure(`/instructorpayment?name=${user?.displayName}`)
-          console.log(response.data);
           return response.data;
         },
     })

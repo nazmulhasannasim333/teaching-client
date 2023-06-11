@@ -47,6 +47,7 @@ const Login = () => {
             name: signinGogle.displayName,
             email: signinGogle.email,
             photo: signinGogle.photoURL,
+            date: new Date().getFullYear()
           };
           fetch("http://localhost:5000/users", {
             method: "POST",

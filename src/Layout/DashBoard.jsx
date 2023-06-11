@@ -41,7 +41,7 @@ const DashBoard = () => {
                       : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
-                  <FaHome className="font-bold text-3xl" />
+                  <FaHome className="font-bold text-xl" />
                   Admin Home
                 </NavLink>
               </li>
@@ -54,7 +54,7 @@ const DashBoard = () => {
                       : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
-                  <FaBookDead className="font-bold text-2xl" />
+                  <FaBookDead className="font-bold text-xl" />
                   Manage Classes
                 </NavLink>
               </li>
@@ -67,7 +67,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                  <FaUsersCog className="font-bold text-3xl" />
+                  <FaUsersCog className="font-bold text-xl" />
                   Manage Users
                 </NavLink>
               </li>
@@ -87,7 +87,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                   <FaHome className="font-bold text-2xl" />
+                   <FaHome className="font-bold text-xl" />
                   Instructor Home
                 </NavLink>
               </li>
@@ -100,7 +100,7 @@ const DashBoard = () => {
                       : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
-                   <FaBook className="font-bold text-2xl" />
+                   <FaBook className="font-bold text-xl" />
                   My Classes
                 </NavLink>
               </li>
@@ -113,7 +113,7 @@ const DashBoard = () => {
                       : "hover:text-purple-600  ease-in duration-200"
                   }
                 >
-                  <FaBookMedical className="font-bold text-2xl" />
+                  <FaBookMedical className="font-bold text-xl" />
                   Add a Class
                 </NavLink>
               </li>
@@ -134,7 +134,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                  <FaHome className="font-bold text-2xl" />
+                  <FaHome className="font-bold text-xl" />
                   Student Home
                 </NavLink>
                 </li>
@@ -147,7 +147,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                  <FaBriefcase className="font-bold  text-2xl" />
+                  <FaBriefcase className="font-bold  text-xl" />
                   My Selected Classes
                 </NavLink>
                 </li>
@@ -160,7 +160,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                   <FaClipboard className="font-bold text-2xl" />
+                   <FaClipboard className="font-bold text-xl" />
                   My Enrolled Classes
                 </NavLink>
               </li>
@@ -173,7 +173,7 @@ const DashBoard = () => {
                     : "hover:text-purple-600  ease-in duration-200"
                 }
                 >
-                  <FaCreditCard className="font-bold text-2xl" />
+                  <FaCreditCard className="font-bold text-xl" />
                   Payment History
                 </NavLink>
               </li>

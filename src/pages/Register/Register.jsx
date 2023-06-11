@@ -20,11 +20,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
 
   const onSubmit = (data) => {
     console.log(data);
-    const password = data.password;
-    const confirm = data.confrm;
-    if(password !== confirm){
-      seterror('Password are not match')
-    }
+   
 
     const user = {
         name: data.name,
@@ -32,7 +28,12 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
         photo: data.photo,
         date: new Date().getFullYear()
       };
-      fetch("http://localhost:5000/users", {
+      const password = data.password;
+      const confirm = data.confirm;
+      if(password !== confirm){
+        seterror('Password are not match')
+      }else {
+        fetch("http://localhost:5000/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -43,6 +44,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
         .then((data) => {
           console.log(data);
           if (data.insertedId) {
+            navigate("/")
             Swal.fire({
               position: "top-end",
               icon: "success",
@@ -52,28 +54,23 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
             });
           }
         });
-
-
-
-
-    createUser(data.email, data.password)
-    .then(result => {
-      const signUpUser = result.user;
-      console.log(signUpUser);
-
-      navigate("/")
-
-      profileUpdate(data.name, data.photo)
-      .then(()=> {
-        console.log("profile updated");
-      })
-      .catch(error => console.log(error))
-    })
-
-    .catch(error => {
-      console.log(error);
-      setShowError(error.message)
-    })
+        createUser(data.email, data.password)
+        .then(result => {
+          const signUpUser = result.user;
+          console.log(signUpUser);
+    
+          profileUpdate(data.name, data.photo)
+          .then(()=> {
+            console.log("profile updated");
+          })
+          .catch(error => console.log(error))
+        })
+    
+        .catch(error => {
+          console.log(error);
+          setShowError(error.message)
+        })
+      }
   };
 
 

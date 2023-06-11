@@ -14,7 +14,7 @@ const DashboardMenu = () => {
               : "hover:text-purple-600 ease-in duration-200"
           }
         >
-          <FaHome className="font-bold text-3xl" />
+          <FaHome className="font-bold text-2xl" />
           Home
         </NavLink>
       </li>
@@ -27,7 +27,7 @@ const DashboardMenu = () => {
               : "hover:text-purple-600 ease-in duration-200"
           }
         >
-          <FaUsers className="font-bold text-3xl" />
+          <FaUsers className="font-bold text-2xl" />
           Instructors
         </NavLink>
       </li>
@@ -40,7 +40,7 @@ const DashboardMenu = () => {
               : "hover:text-purple-600 ease-in duration-200"
           }
         >
-          <FaBookReader className="font-bold text-3xl" />
+          <FaBookReader className="font-bold text-2xl" />
           Classes
         </NavLink>
       </li>
@@ -53,7 +53,7 @@ const DashboardMenu = () => {
               : "hover:text-purple-600 ease-in duration-200"
           }
         >
-          <FaUser className="font-bold text-3xl" />
+          <FaUser className="font-bold text-2xl" />
           Profile
         </NavLink>
       </li>

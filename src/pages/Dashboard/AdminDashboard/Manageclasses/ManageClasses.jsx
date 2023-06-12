@@ -10,6 +10,7 @@ const ManageClasses = () => {
     return res.data;
   });
 
+  // handle class approved
   const handleApproved = (oneClass) => {
     Swal.fire({
       title: "Are you sure?",

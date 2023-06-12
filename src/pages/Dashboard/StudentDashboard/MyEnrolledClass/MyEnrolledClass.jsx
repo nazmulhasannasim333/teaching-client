@@ -19,7 +19,7 @@ const {user, loading} = useContext(AuthContext)
     return (
         <div className="w-full px-10  my-16">
       <h3 className="text-3xl ms-2 my-3 font-bold">
-        Total Selected Class: {payment.length}
+        Total Enrolled Class: {payment.length}
       </h3>
       <div className="overflow-x-auto w-full">
         <table className="table w-full">

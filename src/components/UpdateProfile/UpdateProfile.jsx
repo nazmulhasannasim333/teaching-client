@@ -150,7 +150,7 @@ const navigate = useNavigate()
                 Gender
               </label>
               <select
-                className=" w-full text-black p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
+                className=" w-full  p-2 lg:p-3 rounded-md focus:outline-none my-2 border border-purple-500"
                 {...register("gender")}
               >
                 <option value="Male">Male</option>

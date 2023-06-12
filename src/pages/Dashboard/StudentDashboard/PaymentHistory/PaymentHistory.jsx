@@ -33,7 +33,7 @@ const PaymentHistory = () => {
               <th className="text-xl font-semibold">Customer Email</th>
               <th className="text-xl font-semibold">Transaction ID</th>
               <th className="text-xl font-semibold">Time</th>
-              <th className="text-xl font-semibold">Price</th>
+              <th className="text-xl font-semibold">Amount</th>
             </tr>
           </thead>
           <tbody>
@@ -45,7 +45,7 @@ const PaymentHistory = () => {
                 <td className='text-lg'>{selectOne.email}</td>
                 <td className='text-lg'>{selectOne.transactionId}</td>
                 <td className='text-lg'>{selectOne.date}</td>
-                <td className='text-lg'>${selectOne.price}</td>
+                <td className='text-lg text-end'>${selectOne.price}</td>
               </tr>
             ))}
           </tbody>

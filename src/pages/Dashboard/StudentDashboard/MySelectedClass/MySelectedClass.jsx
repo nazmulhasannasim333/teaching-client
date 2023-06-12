@@ -7,9 +7,6 @@ import useSelected from '../../../../hooks/useSelected';
 const MySelectedClass = () => {
  const [selected, refetch] = useSelected()
 
-
-
-
   const handleDelete = (selectOne) => {
     Swal.fire({
       title: "Are you sure?",

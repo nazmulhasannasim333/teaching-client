@@ -93,7 +93,7 @@ const StudentHome = () => {
                             <h5 className="text-blueGray-400 uppercase font-bold text-xs">
                              Total Payment
                             </h5>
-                            <span className="font-bold text-3xl">{totalPayment}</span>
+                            <span className="font-bold text-3xl">${totalPayment}</span>
                           </div>
                           <div className="relative w-auto pl-4 flex-initial">
                             <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 shadow-lg rounded-full bg-pink-500">

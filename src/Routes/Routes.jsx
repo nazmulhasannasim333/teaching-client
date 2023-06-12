@@ -106,6 +106,8 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
         fetch(`http://localhost:5000/select/${params.id}`),
       },
+      
+      // user profle
       {
         path: "userprofile",
         element: <UserProfile />,

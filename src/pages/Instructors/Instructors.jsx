@@ -4,6 +4,7 @@ import useInstructor from "../../hooks/useInstructor";
 const Instructor = () => {
   const [instructors, setInstructors] = useState([]);
 
+  // get all nstructor 
   useEffect(() => {
     fetch("http://localhost:5000/instructors")
       .then((res) => res.json())

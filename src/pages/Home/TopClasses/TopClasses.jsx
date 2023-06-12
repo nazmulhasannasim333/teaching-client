@@ -10,7 +10,6 @@ const TopClasses = () => {
   const [classes, setClasses] = useState([]);
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
 
   useEffect(() => {
     fetch(`http://localhost:5000/popularclass`)

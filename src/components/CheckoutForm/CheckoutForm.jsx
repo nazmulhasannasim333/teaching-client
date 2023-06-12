@@ -17,7 +17,7 @@ const CheckoutForm = ({ price, loadedClass }) => {
 
   
 
-
+// get all approved class for update spesific class enrolled and avaiable seat
   useEffect(() => {
     fetch(`http://localhost:5000/approvedclass`)
       .then((res) => res.json())

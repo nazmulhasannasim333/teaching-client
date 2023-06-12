@@ -1,5 +1,4 @@
 import React from 'react';
-import CheckComponent from '../../../components/CheckComponent';
 import Contact from '../Contact/Contact';
 import ContactUs from '../ContactUs/ContactUs';
 import Gallery from '../Gallery/Gallery';
@@ -18,7 +17,6 @@ const Home = () => {
             <Contact />
             <Review />
             <ContactUs />
-            <CheckComponent />
         </div>
     );
 };

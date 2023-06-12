@@ -27,7 +27,7 @@ const CheckoutForm = ({ price, loadedClass }) => {
   }, []);
 
 
-// create payment intant
+// create payment intant, and post data
   useEffect(() => {
     if(price > 0){
       axiosSecure.post("/create-payment-intent", { price }).then((res) => {
@@ -37,6 +37,8 @@ const CheckoutForm = ({ price, loadedClass }) => {
     }
   }, [axiosSecure, price]);
 
+
+  // payment button click handler
   const handleSubmit = async (event) => {
     event.preventDefault();
 

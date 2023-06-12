@@ -67,7 +67,7 @@ const ManageClasses = () => {
     });
   };
 
-  // handle class feedbac
+  // handle class feedback
 const handleFedback = (event) => {
     event.preventDefault()
     const form = event.target;

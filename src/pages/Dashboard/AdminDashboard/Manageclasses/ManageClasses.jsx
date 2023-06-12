@@ -40,6 +40,7 @@ const ManageClasses = () => {
     });
   };
 
+// handle class denied
   const handleDenied = (oneClass) => {
     Swal.fire({
       title: "Are you sure?",
@@ -66,6 +67,7 @@ const ManageClasses = () => {
     });
   };
 
+  // handle class feedbac
 const handleFedback = (event) => {
     event.preventDefault()
     const form = event.target;

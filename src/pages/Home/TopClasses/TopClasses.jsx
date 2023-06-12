@@ -24,6 +24,8 @@ const TopClasses = () => {
 
   const handleSelect = (oneClass) => {
     
+    // check user vailable or not
+    // select button conditional
     if (user && user?.email) {
       const {
         className,

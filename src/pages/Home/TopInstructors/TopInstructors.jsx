@@ -4,6 +4,7 @@ import useInstructor from "../../../hooks/useInstructor";
 const TopInstructors = () => {
   const [instructors, setInstructors] = useState([]);
 
+  // get 6 instructor
   useEffect(() => {
     fetch("http://localhost:5000/popularinstructors")
       .then((res) => res.json())

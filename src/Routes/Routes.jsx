@@ -104,7 +104,7 @@ const router = createBrowserRouter([
         path: "payment/:id",
         element: <Payment />,
         loader: ({ params }) =>
-        fetch(`http://localhost:5000/select/${params.id}`),
+        fetch(`https://teaching-server.vercel.app/select/${params.id}`),
       },
       
       // user profle
@@ -115,7 +115,7 @@ const router = createBrowserRouter([
       {
         path: "updateprofile/:id",
         element: <UpdateProfile />,
-        loader: ({params}) => fetch(`http://localhost:5000/getprofileinfo/${params.id}`)
+        loader: ({params}) => fetch(`https://teaching-server.vercel.app/getprofileinfo/${params.id}`)
       },
     ],
   },

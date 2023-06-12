@@ -33,7 +33,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
       if(password !== confirm){
         seterror('Password are not match')
       }else {
-        fetch("http://localhost:5000/users", {
+        fetch("https://teaching-server.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",
@@ -87,7 +87,7 @@ const {createUser, profileUpdate, googleLogin} = useContext(AuthContext);
         photo: signinGogle.photoURL,
         date: new Date().getFullYear()
       };
-      fetch("http://localhost:5000/users", {
+      fetch("https://teaching-server.vercel.app/users", {
         method: "POST",
         headers: {
           "content-type": "application/json",

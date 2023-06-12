@@ -27,7 +27,7 @@ const DashboardUser = () => {
     },[theme])
 
     useEffect(() => {
-      fetch(`http://localhost:5000/userprofile/${user?.email}`)
+      fetch(`https://teaching-server.vercel.app/userprofile/${user?.email}`)
       .then(res => res.json())
       .then(data => {
         setUserProfile(data)

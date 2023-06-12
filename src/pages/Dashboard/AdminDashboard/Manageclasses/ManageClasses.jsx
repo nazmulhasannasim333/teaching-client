@@ -22,7 +22,7 @@ const ManageClasses = () => {
       confirmButtonText: "Yes, Approved",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/classe/approved/${oneClass._id}`, {
+        fetch(`https://teaching-server.vercel.app/classe/approved/${oneClass._id}`, {
           method: "PATCH",
         })
           .then((res) => res.json())
@@ -52,7 +52,7 @@ const ManageClasses = () => {
       confirmButtonText: "Yes, Denied",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/classe/denied/${oneClass._id}`, {
+        fetch(`https://teaching-server.vercel.app/classe/denied/${oneClass._id}`, {
           method: "PATCH",
         })
           .then((res) => res.json())
@@ -76,7 +76,7 @@ const handleFedback = (event) => {
 
     const classFeedback = {feedback, id}
     console.log(classFeedback);
-    fetch(`http://localhost:5000/feedback/${id}`, {
+    fetch(`https://teaching-server.vercel.app/feedback/${id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

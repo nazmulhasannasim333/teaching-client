@@ -52,7 +52,7 @@ const navigate = useNavigate()
               console.log(upadteProfile);
 
 
-              fetch(`http://localhost:5000/updateprofile/${loadUser._id}`, {
+              fetch(`https://teaching-server.vercel.app/updateprofile/${loadUser._id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

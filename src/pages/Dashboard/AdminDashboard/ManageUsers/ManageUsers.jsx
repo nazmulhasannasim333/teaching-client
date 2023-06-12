@@ -10,6 +10,7 @@ const ManageUsers = () => {
     return res.data;
   });
 
+  // handle make admin
   const handleMakeAdmin = (user) => {
     Swal.fire({
       title: "Are you sure?",

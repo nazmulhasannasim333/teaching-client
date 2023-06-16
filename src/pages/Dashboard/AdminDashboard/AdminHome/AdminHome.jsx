@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import moment from "moment";
 import React, { useContext } from "react";
 import { FaBookDead, FaFunnelDollar, FaUsers } from "react-icons/fa";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
@@ -218,7 +219,7 @@ const AdminHome = () => {
                                 </th>
                                 <th
                                   scope="col"
-                                  className="p-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                                  className="p-4  text-xs text-end font-medium text-gray-500 uppercase tracking-wider"
                                 >
                                   Amount
                                 </th>
@@ -231,9 +232,9 @@ const AdminHome = () => {
                                     {payment.transactionId}
                                   </td>
                                   <td className="p-4 whitespace-nowrap text-sm font-normal text-gray-500">
-                                    {payment.date}
+                                  {moment(payment.date).format('MMMM Do YYYY, h:mm')}
                                   </td>
-                                  <td className="p-4 whitespace-nowrap text-sm font-semibold text-gray-900">
+                                  <td className="p-4 whitespace-nowrap text-end text-sm font-semibold text-gray-900">
                                     ${payment.price}
                                   </td>
                                 </tr>

@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import moment from 'moment/moment';
 import React, { useContext } from 'react';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import { AuthContext } from '../../../../provider/AuthProvider';
@@ -44,7 +45,7 @@ const PaymentHistory = () => {
                 <td className="font-semibold text-lg">{selectOne.name}</td>
                 <td className='text-lg'>{selectOne.email}</td>
                 <td className='text-lg'>{selectOne.transactionId}</td>
-                <td className='text-lg'>{selectOne.date}</td>
+                <td className='text-lg'>{moment(selectOne.date).format('MMMM Do YYYY, h:mm')}</td>
                 <td className='text-lg text-end'>${selectOne.price}</td>
               </tr>
             ))}

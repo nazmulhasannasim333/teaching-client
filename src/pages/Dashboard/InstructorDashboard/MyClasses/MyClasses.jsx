@@ -1,4 +1,5 @@
 import React from "react";
+import { FaPenSquare } from "react-icons/fa";
 import useClasses from "../../../../hooks/useClasses";
 
 const MyClasses = () => {
@@ -46,6 +47,7 @@ const MyClasses = () => {
                 )}
               </div>
               <div className="w-1/3 text-end">
+              
               <label htmlFor={oneClass._id}  className="btn btn-sm modal-button">
                 Feedback
               </label>
@@ -56,6 +58,8 @@ const MyClasses = () => {
                 </label>
               </label>
               </div>
+            <FaPenSquare className="text-3xl ms-3 text-amber-500 cursor-pointer" />
+
             </div>
           </div>
         ))}

@@ -113,7 +113,7 @@ const Login = () => {
             type="submit"
             className="group my-6 relative w-full flex justify-center py-3 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500"
           >
-            Register
+            Login
           </button>
         </form>
         <p className="text-center text-red-500 pt-5">{showError && showError}</p>

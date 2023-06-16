@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import moment from 'moment';
 import React, { useContext } from 'react';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import useSelected from '../../../../hooks/useSelected';
@@ -197,7 +198,7 @@ const StudentHome = () => {
                           <th className="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200">
                             Date / Time
                           </th>
-                          <th className="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-bold text-left bg-blueGray-100 text-blueGray-500 border-blueGray-200" >
+                          <th className="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 text-end border-r-0 whitespace-nowrap font-bold  bg-blueGray-100 text-blueGray-500 border-blueGray-200" >
                             Price</ th>
                         </tr>
                       </thead>
@@ -212,14 +213,11 @@ const StudentHome = () => {
                                   </div>
                                 </td>
                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-                                  <div className="flex items-center">{enroll.date}</div>
+                                  <div className="flex items-center">{moment(enroll.date).format('MMMM Do YYYY, h:mm')}</div>
                                 </td>
                                 <td className="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 min-w-140-px">
-                                  <div className="flex items-center">
-                                    <span className="mr-2">${enroll.price}</span>
-                                    <div className="relative w-full">
-                                     
-                                    </div>
+                                  <div className="text-end">
+                                    <span className="me-2">${enroll.price}</span>
                                   </div>
                                 </td>
                               </tr>)

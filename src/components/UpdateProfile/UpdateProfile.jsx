@@ -67,7 +67,7 @@ const navigate = useNavigate()
                     navigate('/dashboard/userprofile')
                     Swal.fire({
                       title: "Success!",
-                      text: "Your class has been added",
+                      text: "Your profile has been updated",
                       icon: "success",
                       confirmButtonText: "Ok",
                     });
@@ -146,7 +146,7 @@ const navigate = useNavigate()
                 </div>
 
                 <div className="pt-3">
-              <label className="text-black" htmlFor="text">
+              <label className="" htmlFor="text">
                 Gender
               </label>
               <select

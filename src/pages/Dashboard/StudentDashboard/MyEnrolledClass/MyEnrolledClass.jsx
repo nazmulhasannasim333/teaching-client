@@ -1,4 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
+import moment from 'moment';
 import React, { useContext } from 'react';
 import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import { AuthContext } from '../../../../provider/AuthProvider';
@@ -51,7 +52,7 @@ const {user, loading} = useContext(AuthContext)
                 </td>
                 <td className="font-semibold text-lg">{selectOne.className}</td>
                 <td className='text-lg'>{selectOne.instructorName}</td>
-                <td className='text-lg'>{selectOne.date}</td>
+                <td className='text-lg'>{moment(selectOne.date).format('MMMM Do YYYY, h:mm')}</td>
                 <td className='text-lg'>${selectOne.price}</td>
                 <td>
                 <button

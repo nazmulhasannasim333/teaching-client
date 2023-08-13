@@ -1,88 +1,66 @@
-import React, { useState } from 'react';
-import { Fade, Slide } from "react-awesome-reveal";
+import React from "react";
+import { Fade } from "react-awesome-reveal";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Slider = () => {
   const slides = [
     {
       id: 1,
-      image: 'https://img.freepik.com/free-photo/classmates-holding-folders_1098-1068.jpg?w=996&t=st=1686076624~exp=1686077224~hmac=fbff1e5404809667363cf582a2d9acd691b74a6ab4cf2ceda00ea077d73a9340',
-      caption: 'Start from Play',
-      description: "Schools also often offer extracurricular activities such as sports, arts, clubs, and organizations, which allow students to explore their interests and develop talents outside of the classroom. These activities promote teamwork, leadership, and personal growth",
+      image:
+        "https://images.pexels.com/photos/8466786/pexels-photo-8466786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Start from Play",
+      description:
+        "Schools also often offer extracurricular activities such as sports, arts, clubs, and organizations, which allow students to explore their interests and develop talents outside of the classroom. These activities promote teamwork, leadership, and personal growth",
     },
     {
       id: 2,
-      image: 'https://images.pexels.com/photos/5428002/pexels-photo-5428002.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      caption: 'Know about Earth',
-      description: "Furthermore, schools serve as a social environment where students interact with their peers, make friends, and learn important social skills. They provide a platform for students to build relationships, develop their communication abilities, and gain exposure to diverse perspectives and cultures.",
+      image:
+        "https://images.pexels.com/photos/8363152/pexels-photo-8363152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Know about Earth",
+      description:
+        "Furthermore, schools serve as a social environment where students interact with their peers, make friends, and learn important social  abilities, and gain exposure to diverse perspectives and cultures.",
     },
     {
       id: 3,
-      image: 'https://img.freepik.com/free-photo/students-knowing-right-answer_329181-14271.jpg?w=996&t=st=1686075212~exp=1686075812~hmac=4f9c421de4b0a4adb2c6e818cb0c1a461a5d5a025e3d9f2afceae4dbe4ee14fb',
-      caption: 'Classes Time',
-      description: "Schools can vary greatly in terms of size, location, educational philosophies, and available resources. Each school has its own unique community, values, and educational approach, which contribute to its overall identity and atmosphere",
+      image:
+        "https://images.pexels.com/photos/5427666/pexels-photo-5427666.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Classes Time",
+      description:
+        "Schools can vary greatly in terms of size, location, educational philosophies, and available resources. Each school has its own unique community, values, and educational approach, which contribute to its overall identity and atmosphere",
+    },
+    {
+      id: 4,
+      image:
+        "https://images.pexels.com/photos/9159042/pexels-photo-9159042.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Lab Room Testing",
+      description:
+        "Lab Room testing by, schools serve as a social environment where students interact with their peers, make friends, and learn important social  abilities, and gain exposure to diverse perspectives and cultures.",
+    },
+    {
+      id: 5,
+      image:
+        "https://images.pexels.com/photos/8500290/pexels-photo-8500290.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      caption: "Class Room  and Reading",
+      description:
+        "Lab Room testing by, schools serve as a social environment where students interact with their peers, make friends, and learn important social  abilities, and gain exposure to diverse perspectives and cultures.",
     },
   ];
 
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const goToSlide = (index) => {
-    setActiveSlide(index);
-  };
-
-  const goToNextSlide = () => {
-    setActiveSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
-  };
-
-  const goToPrevSlide = () => {
-    setActiveSlide((prevSlide) => (prevSlide === 0 ? slides.length - 1 : prevSlide - 1));
-  };
-
   return (
-    <div className="relative">
-    <div className="flex h-[800px]">
-      <div className="relative w-full">
-        <img src={slides[activeSlide].image} alt={slides[activeSlide].caption} className="w-full h-full object-cover" />
-        <div className="absolute top-0 left-0 w-full bg-black bg-opacity-50 h-full flex flex-col justify-center pl-8">
-          <div className='max-w-2xl lg:ms-32 mx-4'>
-          <Slide>
-          <h1 className="text-white lg:text-5xl text-3xl font-bold mb-4 ">{slides[activeSlide].caption}</h1>
-      </Slide>
-          <Fade delay={1e3} cascade damping={1e-1}>
-          <p className="text-white text-lg">{slides[activeSlide].description}</p>
-      </Fade>
+    <Carousel autoPlay={1} className="text-center">
+      {
+        slides.map((slide, i) => <div className="relative" key={i}>
+        <img src={slide.image} />
+        <Fade className="absolute bg-opacity-50 bg-gray-800 top-0 left-0 w-full h-full flex items-center justify-center" delay={1e3} cascade damping={1e-1}>
+          <div className="bg-opacity-25 bg-gray-800 p-10 lg:max-w-7xl w-full rounded-md text-white lg:mb-40">
+          <h1 className="lg:text-5xl text-xl my-4">{slide.caption}</h1>
+          <p className="text-white lg:text-lg text-sm">{slide.description}</p>
           </div>
-        </div>
-      </div>
-    </div>
-
-    <div className="flex justify-center mt-2">
-      {slides.map((slide, index) => (
-        <button
-          key={slide.id}
-          className={`w-3 h-3 mx-2 rounded-full ${activeSlide === index ? 'bg-blue-500' : 'bg-gray-300'}`}
-          onClick={() => goToSlide(index)}
-        ></button>
-      ))}
-    </div>
-
-    <div className="absolute top-1/2 left-4 transform -translate-y-1/2">
-      <button
-        className="bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-800 p-2 rounded-full"
-        onClick={goToPrevSlide}
-      >
-        Prev
-      </button>
-    </div>
-
-    <div className="absolute top-1/2 right-4 transform -translate-y-1/2">
-      <button
-        className="bg-white bg-opacity-50 hover:bg-opacity-75 text-gray-800 p-2 rounded-full"
-        onClick={goToNextSlide}
-      >
-        Next
-      </button>
-    </div>
-  </div>
+        </Fade>
+      </div>)
+      }
+    </Carousel>
   );
 };
 
